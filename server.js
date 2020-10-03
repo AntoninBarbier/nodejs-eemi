@@ -3,16 +3,18 @@ const bodyParser = require('body-parser')
 
 let app = express()
 app.use(bodyParser.urlencoded({ extended: true }))
+app.use(bodyParser.json())
+app.use(bodyParser.text({defaultCharset: 'utf-8'}))
 
-var port = process.env.PORT || 8000
+var port = process.env.PORT || 3000
 
 app.get('/', (req, res) => res.send('Bonjour'))
 
 app.get('/hello', (req, res) => {
-    if(req.query.name) {
-        res.send(`Bonjour ${req.query.name}`)
+    if(req.query.nom) {
+        res.send(`Bonjour, ${req.query.nom} !`)
     } else {
-        res.send('Bonjour')
+        res.send('Quel est votre nom ?')
     }
 })
 
