@@ -1,3 +1,15 @@
+# Lancer les exercices
+
+Partie 3 - Filesystem
+
+Lancer les lignes de commandes suivantes pour exécuter les programmes:
+
+Exercice 1 `node minuscules.js`
+Exercice 2 `node minuscules2.js`
+Exercice 3 `node callback.js`
+Exercice 4 `node promesses.js`
+Exercice 5 `node async-await.js`
+
 # Run server:
 
     npm i
